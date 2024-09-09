@@ -1,11 +1,11 @@
 import mongoose from "mongoose";
 
 const createConnection = async (
-  url: string,
+  url: string, // changed to string
   mongooseConnectConfig?: mongoose.ConnectOptions
 ) => {
   try {
-    const connection = await mongoose.connect(url, mongooseConnectConfig);
+    const connection = await mongoose.connect(url, mongooseConnectConfig || {}); // added fallback for config
     console.log("Connected to MongoDB");
     return connection;
   } catch (error) {

@@ -87,7 +87,7 @@ export const getEthBeaconDepositTrackerService = async () => {
       blockchainGateway: ethGateway,
       notificatorGateway: telegramNotifierGateway,
       depositsRepository: depositsRepository,
-      filterIn: ["0x00000000219ab540356cBB839Cbe05303d7705Fa"],
+      filterIn: ["0xdac17f958d2ee523a2206206994597c13d831ec7"],
     });
 
     console.info("EthBeaconService created");
